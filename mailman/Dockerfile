@@ -1,11 +1,7 @@
-FROM stackbrew/debian
-
+FROM xavia/baseimage
 MAINTAINER Matt Lehner <mlehner@gmail.com>
 
-ENV DEBIAN_FRONTEND noninteractive
-ENV DEBIAN_PRIORITY critical
-ENV DEBCONF_NOWARNINGS yes
+RUN /build/build.sh && \
+	/build/cleanup.sh
 
-RUN apt-get update
-RUN apt-get -y upgrade
-RUN apt-get -y install mailman postfix spawn-fcgi
+EXPOSE 25
