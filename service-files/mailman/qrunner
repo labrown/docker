@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# execute a pass through the queues once per minute
+while `/bin/true`; do
+   /var/lib/mailman/bin/qrunner --runner=All --once
+   sleep 60
+done
