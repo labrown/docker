@@ -1,9 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
 
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
 export PATH
+
+/etc/service/postfix/postfix-init.sh
 
 # guess path for command_directory
 command_directory=`postconf -h command_directory`

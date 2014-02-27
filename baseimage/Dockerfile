@@ -10,4 +10,5 @@ ADD . /build
 RUN /build/build.sh && \
 	/build/cleanup.sh
 
+ENTRYPOINT ["/build/init.sh"]
 CMD ["/usr/sbin/runsvdir-start"]
