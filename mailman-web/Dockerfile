@@ -1,4 +1,4 @@
-FROM xavia/baseimage
+FROM xavia/mailman
 MAINTAINER Matt Lehner <mlehner@gmail.com>
 
 ENV HOME /root

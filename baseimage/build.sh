@@ -32,4 +32,3 @@ $minimal_apt_get_install runit
 
 ## Install a syslog daemon.
 $minimal_apt_get_install rsyslog
-cp -R /build/service-files/rsyslog /etc/service/
